@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,400&display=swap');
+
+$main-font: 'Roboto', sans-serif;
+$main-text-color: rgb(0, 0, 0);
+$accent-color: rgb(197, 14, 14);//this one doesn't work?
+$background-color: lighten($accent-color, 30%);
+$background-color-light: lighten($accent-color, 35%);
+$accent-color-light: lighten($accent-color, 27%);
+$individualRoomColor: $background-color;
+$warning-color: #797979;

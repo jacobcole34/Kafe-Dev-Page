@@ -9,10 +9,11 @@ const linkStyle = {
   color: 'black'
 };
 
-const btnStyle = {minWidth: 150,
+const btnStyle = {minWidth: 200,
   textTransform: 'unset',
   color: 'palette.primary.dark',
   fontSize: 18,
+  marginLeft: 10,
 };
 
 function Banner(){

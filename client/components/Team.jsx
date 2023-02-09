@@ -14,11 +14,12 @@ import Yirou from '../assets/Yirou.png';
 
 function Team(){
   return(
-    <Container spacing={2}>
+    <Container spacing={2} sx={{marginTop:3}}>
 
-      <Typography variant='h5'>Meet the Team</Typography>
+      <Typography variant='h5'><b>Meet the Team</b></Typography>
       <Stack direction="row" spacing={5} marginTop={5}>
         <Button
+          href="https://www.linkedin.com/in/carolina-llano-g%C3%B3mez/"
           sx= {{
             minHeight: 200,
             minWidth: 200,
@@ -27,6 +28,7 @@ function Team(){
         </Button>
 
         <Button
+          href="https://www.linkedin.com/in/jacobcole34/"
           sx= {{
             minHeight: 200,
             minWidth: 200,
@@ -35,6 +37,7 @@ function Team(){
         </Button>
 
         <Button
+        href="https://www.linkedin.com/in/kpange-kaitibi-522b31102/"
           sx= {{
             minHeight: 200,
             minWidth: 200,
@@ -43,6 +46,7 @@ function Team(){
         </Button>
 
         <Button
+          href="https://www.linkedin.com/in/oliver-zhang91/"
           sx= {{
             minHeight: 200,
             minWidth: 200,
@@ -51,6 +55,7 @@ function Team(){
         </Button>
 
         <Button
+          href="https://www.linkedin.com/in/yirouchen/"
           sx= {{
             minHeight: 200,
             minWidth: 200,
@@ -60,28 +65,24 @@ function Team(){
       </Stack>
 
       <Stack direction="row" spacing={5} marginLeft={7}>
-        <Typography variant="h5" minWidth={200}>Caro
-        <Button variant="text" size="large" href="https://www.linkedin.com/in/carolina-llano-g%C3%B3mez/" startIcon={<LinkedInIcon fontSize="large"/>}></Button>
+        <Typography variant="h6" minWidth={200}>Caro
+        <Button variant="text" size="large" href="https://github.com/Caro-Gomez" startIcon={<GitHubIcon />}></Button>
         </Typography>
 
-        <Typography variant="h5" minWidth={200}>Jacob
-        <Button variant="text" size="large" href="https://github.com/oslabs-beta/Kafe" startIcon={<GitHubIcon />}></Button>
-        <Button variant="text" size="large" href="https://www.linkedin.com/company/kafe-kafka/" startIcon={<LinkedInIcon fontSize="large"/>}></Button>
+        <Typography variant="h6" minWidth={200}>Jacob
+        <Button variant="text" size="large" href="https://github.com/jacobcole34" startIcon={<GitHubIcon />}></Button>
         </Typography>
 
-        <Typography variant="h5" minWidth={200}>Kpange
-        <Button variant="text" size="large" href="https://github.com/oslabs-beta/Kafe" startIcon={<GitHubIcon />}></Button>
-        <Button variant="text" size="large" href="https://www.linkedin.com/company/kafe-kafka/" startIcon={<LinkedInIcon fontSize="large"/>}></Button>
+        <Typography variant="h6" minWidth={200}>Kpange
+        <Button variant="text" size="large" href="https://github.com/KpangeKaitibi" startIcon={<GitHubIcon />}></Button>
         </Typography>
 
-        <Typography variant="h5" minWidth={200}>Oliver
-        <Button variant="text" size="large" href="https://github.com/oslabs-beta/Kafe" startIcon={<GitHubIcon />}></Button>
-        <Button variant="text" size="large" href="https://www.linkedin.com/company/kafe-kafka/" startIcon={<LinkedInIcon fontSize="large"/>}></Button>
+        <Typography variant="h6" minWidth={200}>Oliver
+        <Button variant="text" size="large" href="https://github.com/zezang" startIcon={<GitHubIcon />}></Button>
         </Typography>
 
-        <Typography variant="h5" minWidth={200}>Yirou
-        <Button variant="text" size="large" href="https://github.com/oslabs-beta/Kafe" startIcon={<GitHubIcon />}></Button>
-        <Button variant="text" size="large" href="https://www.linkedin.com/company/kafe-kafka/" startIcon={<LinkedInIcon fontSize="large"/>}></Button>
+        <Typography variant="h6" minWidth={200}>Yirou
+        <Button variant="text" size="large" href="https://github.com/WarmDarkMatter" startIcon={<GitHubIcon />}></Button>
         </Typography>
       </Stack>
     </Container>

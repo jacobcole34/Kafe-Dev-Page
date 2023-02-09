@@ -19,9 +19,9 @@ const btnStyle = {minWidth: 150,
 function Navbar(){
 
   return(
-    <Grid container sx={{ marginLeft: 5, marginTop: 4}}>
+    <Grid container sx={{ margin: 4, borderBottom: 1}}>
 
-      <Stack  direction="row" spacing={8} >
+      <Stack  direction="row" spacing={10} >
         <Grid>
           <Button
             sx= {{
@@ -33,6 +33,7 @@ function Navbar(){
         <Button variant="text" size="large" sx={btnStyle}>Features</Button>
         <Button variant="text" size="large" sx={btnStyle}>Docs</Button>
         <Button variant="text" size="large" sx={btnStyle}>Team</Button>
+        <Button variant="text" size="large" href="https://www.linkedin.com/company/kafe-kafka/" startIcon={<LinkedInIcon />}></Button>
         <Button variant="text" size="large" href="https://github.com/oslabs-beta/Kafe" startIcon={<GitHubIcon />}></Button>
         <Button variant="text" size="large" startIcon={<EmailIcon />}></Button>
 

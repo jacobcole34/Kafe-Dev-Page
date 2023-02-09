@@ -15,7 +15,7 @@ function Dashboard(){
           <Navbar />
         </Grid>
 
-        <Grid item md={12} sx={{ background: 'linear-gradient(to top, #CCE1EB, white)', minHeight: '400px'}}>
+        <Grid item md={12} sx={{ background: 'linear-gradient(to top, #fbae42, white)', minHeight: '400px'}}>
           <Banner />
         </Grid>
 

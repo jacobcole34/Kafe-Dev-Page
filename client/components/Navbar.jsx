@@ -2,7 +2,6 @@ import React from 'react';
 import Stack from '@mui/material/Stack';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
-import Container from '@mui/material/Container';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
@@ -16,7 +15,7 @@ const btnStyle = {minWidth: 150,
   fontSize: 18,
 };
 
-function Navbar(){
+function Navbar({onClick}){
 
   return(
     <Grid container sx={{ margin: 4, borderBottom: 1}}>
@@ -30,7 +29,7 @@ function Navbar(){
               marginBottom: 0 }}
             style= {{backgroundImage:`url(${logo})`}}>
           </Button></Grid>
-        <Button variant="text" size="large" sx={btnStyle}>Features</Button>
+        <Button variant="text" size="large" sx={btnStyle} onClick = {onClick}>Features</Button>
         <Button variant="text" size="large" sx={btnStyle}>Docs</Button>
         <Button variant="text" size="large" sx={btnStyle}>Team</Button>
         <Button variant="text" size="large" href="https://www.linkedin.com/company/kafe-kafka/" startIcon={<LinkedInIcon />}></Button>

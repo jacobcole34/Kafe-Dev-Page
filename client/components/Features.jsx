@@ -6,21 +6,20 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import FreeBreakfastIcon from '@mui/icons-material/FreeBreakfast';
 import Container from '@mui/material/Container';
-import Grid from '@mui/material/Grid';
-import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
-import ListItem from '@mui/material/ListItem';
-// import clusterPNG from '../assets/features/cluster_hierarchy_tree.png';
 import clusterGif from '../assets/features/d3.gif';
 import realTimeGif from '../assets/features/clusterRealTime.gif';
 import clusterManagerGif from '../assets/features/clusterManager.gif';
 import dlqGif from '../assets/features/dlq.gif';
+import { forwardRef } from 'react';
 
 
-function Features(props) {
-
+function Features(featuresRef) {
+  
   return(
-    <Container spacing={2}>
+    <Container 
+    spacing={2}
+    >
 
 <Stack
    direction="column"
@@ -59,7 +58,7 @@ function Features(props) {
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header">
-          <Typography variant='h6'>Realtime Metric</Typography>
+          <Typography variant='h6'>Realtime Metrics</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography variant='h6'>
@@ -69,11 +68,11 @@ function Features(props) {
           <img src={realTimeGif}/>
           <Stack direction ="column" spacing={2}>
           <FreeBreakfastIcon sx={{ color:'secondary.dark'}}/>
-          <Typography variant='h6'> Navigate to the "Home" tab to view your Kafka cluster rendered as a tree </Typography>
+          <Typography variant='h6'> Kafe provides metrics for your cluster and individual brokers. </Typography>
           <FreeBreakfastIcon/>
-       <Typography variant='h6'> Each node can be expanded/collapsed for viewing convenience </Typography>
+       <Typography variant='h6'> Keep track of CPU and memory consumption and visualize the overall health of your Kafka cluster in "Cluster Summary." </Typography>
        <FreeBreakfastIcon/>
-       <Typography variant='h6'> Quickly identify which broker each topic partition is assigned to </Typography>
+       <Typography variant='h6'> Monitor each broker's traffic volume while tracking producer and consumer lag. </Typography>
           </Stack>
        </Stack>
         </AccordionDetails>
@@ -93,9 +92,12 @@ function Features(props) {
           <Stack marginTop={3} direction="row" spacing={5}>
           <img src={clusterManagerGif}/>
           <Stack direction ="column" spacing={2}>
-          <Typography variant='h6'> • Navigate to the "Home" tab to view your Kafka cluster rendered as a tree </Typography>
-       <Typography variant='h6'> • Each node can be expanded/collapsed for viewing convenience </Typography>
-       <Typography variant='h6'> • Quickly identify which broker each topic partition is assigned to </Typography>
+          <FreeBreakfastIcon/>
+          <Typography variant='h6'> Monitor and manage the topics in your Kafka cluster. </Typography>
+          <FreeBreakfastIcon/>
+       <Typography variant='h6'> Each node can be expanded/collapsed for viewing convenience. </Typography>
+       <FreeBreakfastIcon/>
+       <Typography variant='h6'> Quickly identify which broker each topic partition is assigned to. </Typography>
           </Stack>
        </Stack>
         </AccordionDetails>
@@ -115,9 +117,12 @@ function Features(props) {
           <Stack marginTop={3} direction="row" spacing={5}>
           <img src={dlqGif}/>
           <Stack direction ="column" spacing={2}>
-          <Typography variant='h6'> • Navigate to the "Home" tab to view your Kafka cluster rendered as a tree </Typography>
-       <Typography variant='h6'> • Each node can be expanded/collapsed for viewing convenience </Typography>
-       <Typography variant='h6'> • Quickly identify which broker each topic partition is assigned to </Typography>
+          <FreeBreakfastIcon/>
+          <Typography variant='h6'>Dead letter queue table to display all failed messages by topic. </Typography>
+          <FreeBreakfastIcon/>
+       <Typography variant='h6'> Insights to your partition replicas by topic. </Typography>
+       <FreeBreakfastIcon/>
+       <Typography variant='h6'> Visualization of trailing failed messages with time select option. </Typography>
           </Stack>
        </Stack>
         </AccordionDetails>
@@ -161,33 +166,6 @@ export default Features;
   </Grid>
 </Grid>
 
-<Grid>
-  <Typography variant='h3' sx={{mb: 5}}> Cluster Manager </Typography>
-  <Typography variant='h5'>An intuitive, easy-to-use GUI tool to manage your cluster.</Typography>
-   <Grid container spacing={3} style={{display: 'flex'}}>
-      <Grid item xs={12} md={6}>
-        <img src={clusterManagerGif}/>
-      </Grid>
-      <Grid item xs={12} md={6}>
-        <Typography variant='h6'> • Monitor and manage your topics in your Kafka cluster </Typography>
-        <Typography variant='h6'> • Insights to your partition replicas by topic</Typography>
-        <Typography variant='h6'> • Create topic, delete topic, delete messages and reassign partition </Typography>
-      </Grid>
-  </Grid>
-</Grid>
-
-<Grid>
-  <Typography variant='h3' sx={{mb: 5}}> Dead Letter Queue </Typography>
-  <Typography variant='h5'> Kafe offers troubleshooting support and failed message processing with a Dead Letter Queue implementation. Visited our companion application Kafe-DLQ for more information.</Typography>
-  <Grid style={{display: 'flex'}}>
-
-      <Box item xs={12} md={6}>
-        <Typography variant='h6'> • Dead letter queue table to display all faield messages by topic </Typography>
-        <Typography variant='h6'> • Dynamic analytical tools to view troubled topic breakdown </Typography>
-        <Typography variant='h6'> • Visualization of trailing failed messages with time select option </Typography>
-      </Box>
-      <img src={dlqGif}/>
-  </Grid>
 
 </Grid> */}
 

@@ -4,7 +4,6 @@ import Navbar from '../components/Navbar';
 import Banner from '../components/Banner';
 import Team from '../components/Team';
 import Features from '../components/Features';
-import Docs from '../components/Docs';
 
 function Dashboard(){
 
@@ -22,10 +21,6 @@ function Dashboard(){
 
         <Grid item md={12} sx={{ bgcolor: 'primary.light', minHeight: '50vh' }}>
           <Features />
-        </Grid>
-
-        <Grid item md={12} sx={{ bgcolor: 'primary.light', minHeight: '50vh' }}>
-          <Docs />
         </Grid>
 
         <Grid item md={12} sx={{ bgcolor: 'primary.light', minHeight: '50vh' }}>

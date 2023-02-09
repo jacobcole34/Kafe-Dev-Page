@@ -36,15 +36,15 @@ module.exports = {
         }
       },
       {
-        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        test: /\.(woff(2)?|ttf|eot|gif|svg)(\?v=\d+\.\d+\.\d+)?$/,
         use: [{
           loader: 'file-loader',
           options: {
             name: '[name].[ext]',
             outputPath: 'fonts/'
           }
-        } 
-        ] 
+        }
+        ]
       }
     ],
   },
@@ -52,7 +52,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Development',
-      template: 'index.html',
+      template: './client/index.html',
     }),
   ],
 
@@ -67,7 +67,7 @@ module.exports = {
     proxy: [
       {
         context: ['/auth', '/api', '/auth_callback', '/access_drive'],
-        target: 'http://localhost:3000',
+        target: 'http://localhost:3333',
       },
     ],
   },

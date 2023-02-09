@@ -9,7 +9,7 @@ const linkStyle = {
   color: 'black'
 };
 
-const btnStyle = {minWidth: 150, 
+const btnStyle = {minWidth: 150,
   textTransform: 'unset',
   color: 'palette.primary.dark',
   fontSize: 18,
@@ -18,14 +18,14 @@ const btnStyle = {minWidth: 150,
 function Banner(){
   const handleClick = () => {
     const textField = document.querySelector('#text-field');
-    textField.select(); 
+    textField.select();
     document.execCommand('copy');
   };
 
 
   return(
     <Grid container spacing={2}>
-      <Stack 
+      <Stack
         direction="column"
         spacing={5}
         margin={10}>
@@ -33,13 +33,13 @@ function Banner(){
         <Container >
           <Typography variant="h1"><b>Kafé</b></Typography>
           <Typography variant="h2">an <b>open source</b> monitoring, visualization, and management tool for Apache Kafka </Typography>
-          </Container>
+        </Container>
 
-        <Stack 
-          direction="row" 
+        <Stack
+          direction="row"
           spacing={5}>
-          <Button 
-            variant="contained" 
+          <Button
+            variant="contained"
             sx={btnStyle}>
               Get Started</Button>
           <TextField id='text-field' value= 'npm install kafe-dlq' sx={{fontSize: 18}} InputProps={{
@@ -48,14 +48,14 @@ function Banner(){
                 <ContentCopyIcon />
               </InputAdornment>
             ),
-          }} onClick = {handleClick}></TextField>  
+          }} onClick = {handleClick}></TextField>
         </Stack>
 
       </Stack>
     </Grid>
-    
+
   );
 }
-  
+
 export default Banner;
 

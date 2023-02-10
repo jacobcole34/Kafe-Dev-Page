@@ -9,7 +9,7 @@ module.exports = {
     filename: 'bundle.js',
     publicPath: '/'
   },
-  mode: 'development',
+  mode: process.env.NODE_ENV,
   resolve: {
     extensions: ['.js', '.jsx'],
   },

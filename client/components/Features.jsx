@@ -15,12 +15,8 @@ import { forwardRef } from 'react';
 
 
 function Features(featuresRef) {
-  
-  return(
-    <Container 
-    spacing={2}
-    >
-
+return(
+<Container>
 <Stack
    direction="column"
    marginTop={6}
@@ -134,59 +130,3 @@ function Features(featuresRef) {
 
 export default Features;
 
-{/* <Container maxWidth="xl" sx={{ mt: 4, mb: 4}}>
-<Typography variant='h2'><b>Features</b></Typography>
-<br></br>
-
-<Grid spacing={8} maxWidth="xl" sx={{ mt: 4, mb: 4}}>
-  <Typography variant='h3'> Cluster Tree </Typography>
-  <Typography variant='h5' sx={{mb: 5}}> A graphical representation of your entire Kafka cluster, rendered with a D3 tree </Typography>
-  <Grid style={{display: 'flex'}}>
-     <Grid container spacing={2}>
-       <img src={clusterGif}/>
-     </Grid>
-     <Grid spacing={3}>
-       <Typography variant='h5' sx={{mb: 5}}> • Navigate to the "Home" tab to view your Kafka cluster rendered as a tree </Typography>
-       <Typography variant='h5' sx={{mb: 5}}> • Each node can be expanded/collapsed for viewing convenience </Typography>
-       <Typography variant='h5' sx={{mb: 5}}> • Quickly identify which broker each topic partition is assigned to </Typography>
-     </Grid>
-  </Grid>
-</Grid>
-
-<Grid>
-  <Typography variant='h3'> Realtime Metrics </Typography>
-  <Typography variant='h5' sx={{mb: 5}}>Real time charts to track important metrics that reflect the health of your Kafka cluster.</Typography>
-  <Grid style={{display: 'flex'}}>
-      <Box>
-        <Typography variant='h5'> • Kafe provides metrics for your cluster and individual brokers </Typography>
-        <Typography variant='h5'> • Keep track of CPU and memory consumption and visualize the overall health of your Kafka cluster in "Cluster Summary" </Typography>
-        <Typography variant='h5'> • Monitor each broker's traffic volume while tracking producer and consumer lag</Typography>
-      </Box>
-      <img src={realTimeGif}/>
-  </Grid>
-</Grid>
-
-
-</Grid> */}
-
-{/* <Typography variant='h5'>
-Kafka is impressive without a doubt, but it does carry a set of implementation challenges–especially for engineers new to the platform.
-First and foremost, Kafka is headless, lacking a GUI interface or any readable way to interact with the application outside the command line. Second, Kafka is complex and carries a significant amount of maintenance overhead. A Kafka cluster requires continual load rebalancing for optimal performance. And finally, as a living data ecosystem, Kafka requires significant monitoring and visibility to ensure its ongoing health.
-Kafe is a free and open source.
-  <br></br>
-  <br></br>
-Kafè allows Kafka engineers to: <br></br>
-  1.  Visualize the Kafka cluster through its brokers, topics, and replicas. <br></br>
-  2.  Monitor health metrics like CPU, memory usage, and in-sync replicas.<br></br>
-  3.  Create and delete topics.<br></br>
-  4.  Reassign topic replicas. <br></br>
-  5.  Track unconsumed messages via the Dead Letter Queue (DLQ), alerting engineers when consumer applications are failing to process streaming data.
-  <br></br> <br></br>
-
-Kafè comes packaged with a pre-configured Docker container, composed of three Kafka brokers, Zookeeper, and Prometheus to enable data scraping from the Java Virtual Machine (JVM).
-Engineers eager to manage and monitor Kafka via Kafè need only compose up the container and start working with the tool.
-  <br></br><br></br>
-
-</Typography> */}
-
-//</Container>

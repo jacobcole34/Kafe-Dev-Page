@@ -6,6 +6,8 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
 import logo from '../assets/Logo2.png';
+import { useState } from 'react';
+
 
 const btnStyle = {minWidth: 150,
   margin: '0px',
@@ -15,7 +17,23 @@ const btnStyle = {minWidth: 150,
   fontSize: 18,
 };
 
-function Navbar({onClick}){
+const Navbar = ({featuresRef}) => {
+
+  const handleScrollToFeatures = (e) => {
+    featuresRef.current.scrollIntoView({
+      behavior: 'smooth',
+      block: 'nearest',
+      inline: 'center'
+    });
+  }
+
+  const handleScrollToTeam = () => {
+    teamRef.current.scrollIntoView({
+      behavior: 'smooth',
+      block: 'nearest',
+      inline: 'center'
+    });
+  }
 
   return(
     <Grid container sx={{ margin: 4, borderBottom: 1}}>
@@ -29,7 +47,7 @@ function Navbar({onClick}){
               marginBottom: 0 }}
             style= {{backgroundImage:`url(${logo})`}}>
           </Button></Grid>
-        <Button variant="text" size="large" sx={btnStyle} onClick = {onClick}>Features</Button>
+        <Button variant="text" size="large" sx={btnStyle} onClick = {handleScrollToFeatures}>Features</Button>
         <Button variant="text" size="large" sx={btnStyle}>Docs</Button>
         <Button variant="text" size="large" sx={btnStyle}>Team</Button>
         <Button variant="text" size="large" href="https://www.linkedin.com/company/kafe-kafka/" startIcon={<LinkedInIcon />}></Button>

@@ -1,5 +1,5 @@
 /* eslint-disable indent */
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Grid, Container, Typography, Button, TextField, Stack, InputAdornment } from '@mui/material';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
@@ -21,7 +21,14 @@ function Banner(){
     const textField = document.querySelector('#text-field');
     textField.select();
     document.execCommand('copy');
+
+    setCopy(true);
+    setTimeout(() => {
+      setCopy(false)
+    }, 1000);
   };
+
+  const [copy, setCopy] = useState(false);
 
 
   return(
@@ -45,7 +52,7 @@ function Banner(){
               Get Started</Button>
           <TextField id='text-field' value= 'npm install kafe-dlq' sx={{fontSize: 18}} InputProps={{
             endAdornment: (
-              <InputAdornment position="end">
+              copy ? <div> Copied! </div> : <InputAdornment position="end">
                 <ContentCopyIcon />
               </InputAdornment>
             ),

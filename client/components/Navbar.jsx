@@ -17,23 +17,7 @@ const btnStyle = {minWidth: 150,
   fontSize: 18,
 };
 
-const Navbar = ({featuresRef}) => {
-
-  const handleScrollToFeatures = (e) => {
-    featuresRef.current.scrollIntoView({
-      behavior: 'smooth',
-      block: 'nearest',
-      inline: 'center'
-    });
-  }
-
-  const handleScrollToTeam = () => {
-    teamRef.current.scrollIntoView({
-      behavior: 'smooth',
-      block: 'nearest',
-      inline: 'center'
-    });
-  }
+const Navbar = ({ scrollToFeatures, scrollToTeam }) => {
 
   return(
     <Grid container sx={{ margin: 4, borderBottom: 1}}>
@@ -47,9 +31,9 @@ const Navbar = ({featuresRef}) => {
               marginBottom: 0 }}
             style= {{backgroundImage:`url(${logo})`}}>
           </Button></Grid>
-        <Button variant="text" size="large" sx={btnStyle} onClick = {handleScrollToFeatures}>Features</Button>
+        <Button variant="text" size="large" sx={btnStyle} onClick = {scrollToFeatures}>Features</Button>
         <Button variant="text" size="large" sx={btnStyle}>Docs</Button>
-        <Button variant="text" size="large" sx={btnStyle}>Team</Button>
+        <Button variant="text" size="large" sx={btnStyle} onClick = {scrollToTeam}>Team</Button>
         <Button variant="text" size="large" href="https://www.linkedin.com/company/kafe-kafka/" startIcon={<LinkedInIcon />}></Button>
         <Button variant="text" size="large" href="https://github.com/oslabs-beta/Kafe" startIcon={<GitHubIcon />}></Button>
         <Button variant="text" size="large" startIcon={<EmailIcon />}></Button>

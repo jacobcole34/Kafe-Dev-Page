@@ -14,15 +14,33 @@ function Dashboard(){
 
   // useEffect(() => {
   //   const element = featuresRef.current;
-  //   console.log('line 17',  element); // 👈️ element here
+  //   console.log('line 17',  element); //
   // }, []);
+
+  const scrollToFeatures = (e) => {
+    featuresRef.current.scrollIntoView({
+      behavior: 'smooth',
+      block: 'nearest',
+      inline: 'center'
+    });
+  }
+
+  const scrollToTeam = () => {
+    teamRef.current.scrollIntoView({
+      behavior: 'smooth',
+      block: 'nearest',
+      inline: 'center'
+    });
+  }
 
   return(
     <>
       <Grid container sx={{ minHeight: '100%'}}>
 
         <Grid item md={12} sx={{ minHeight: '120px'}}>
-          <Navbar />
+          <Navbar
+          scrollToFeatures = {scrollToFeatures}
+          scrollToTeam = {scrollToTeam}/>
         </Grid>
 
         <Grid item md={12} sx={{ background: 'linear-gradient(to top, #CCE1EB, white)', minHeight: '400px'}}>
@@ -30,13 +48,15 @@ function Dashboard(){
         </Grid>
 
         <Grid item md={12} sx={{ bgcolor: 'primary.light', minHeight: '50vh' }}>
-          <Features
-          featuresRef={featuresRef} />
+          <div ref={featuresRef}>
+            <Features/>
+          </div>
         </Grid>
 
         <Grid item md={12} sx={{ bgcolor: 'primary.light', minHeight: '50vh' }}>
-          <Team 
-          />
+          <div ref={teamRef}>
+            <Team/>
+          </div>
         </Grid>
 
       </Grid>

@@ -15,7 +15,9 @@ import { forwardRef } from 'react';
 
 
 function Features(featuresRef) {
+
 return(
+
 <Container>
 <Stack
    direction="column"
@@ -24,7 +26,7 @@ return(
     <Typography variant='h5'sx={{color:'primary.dark'}}><b>Features</b></Typography>
     </Stack>
     <br></br>
-    <Accordion sx={{ color:'primary.dark', backgroundColor:'primary.light', boxShadow: "none" }}>
+    <Accordion defaultExpanded={true} sx={{ color:'primary.dark', backgroundColor:'primary.light', boxShadow: "none" }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
@@ -123,7 +125,7 @@ return(
        </Stack>
         </AccordionDetails>
       </Accordion>
-  
+
 </Container>
   );
 }

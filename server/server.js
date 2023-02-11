@@ -5,7 +5,7 @@ const dotenv = require('dotenv');
 // const { fileURLToPath } = require('url');
 
 const app = express();
-const port = 3333;
+const port = process.env.PORT || 3333;
 // const __filename = fileURLToPath(import.meta.url);
 // const __dirname = path.dirname(__filename);
 
@@ -32,5 +32,5 @@ app.use('*', (req,res) => {
 
 
 app.listen(port, () => {
-  console.log(`App listening on port ${port}`);
+  console.log(`App listening on port ${process.env.PORT || 3333}`);
 });
